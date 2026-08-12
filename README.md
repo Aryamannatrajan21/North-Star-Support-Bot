@@ -3,6 +3,9 @@
 This repository contains a simple, highly-testable command-line chatbot built with Python and OpenAI. 
 It exactly fulfills the requirements for the Upwork Talent Accelerator AI Chatbot Contract.
 
+## 🎥 Video Demo
+[Click here to watch the Video Demo!](./AI%20CHatbot%20Video.mp4)
+
 ## 🚀 How to Run Locally (For you)
 
 1. **Install Dependencies:**
