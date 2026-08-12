@@ -79,8 +79,8 @@ def main():
                 messages=messages,
                 temperature=0.2, # Keep low for strict rule adherence
                 top_p=0.95,
-                max_tokens=4096,
-                extra_body={"chat_template_kwargs":{"enable_thinking":True},"reasoning_budget":2048},
+                max_tokens=16384,
+                extra_body={"chat_template_kwargs":{"enable_thinking":True},"reasoning_budget":16384},
                 stream=True
             )
             
