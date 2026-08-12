@@ -79,17 +79,25 @@ def main():
                 messages=messages,
                 temperature=0.2, # Keep low for strict rule adherence
                 top_p=0.95,
-                max_tokens=16384,
-                extra_body={"chat_template_kwargs":{"enable_thinking":True},"reasoning_budget":16384},
+                max_tokens=4096,
+                extra_body={"chat_template_kwargs":{"enable_thinking":True},"reasoning_budget":2048},
                 stream=True
             )
             
             bot_reply = ""
             first_content = True
+            chunk_count = 0
             
             for chunk in completion:
                 if not chunk.choices:
                     continue
+                
+                chunk_count += 1
+                
+                # Check for reasoning to animate the [Thinking...] indicator
+                reasoning = getattr(chunk.choices[0].delta, "reasoning_content", None)
+                if reasoning and chunk_count % 10 == 0:
+                    print("\033[95m.\033[0m", end="", flush=True)
                 
                 # Check for actual content (we ignore printing the reasoning_content now)
                 if chunk.choices[0].delta.content is not None:
