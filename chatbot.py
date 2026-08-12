@@ -23,10 +23,10 @@ client = OpenAI(api_key=API_KEY, base_url="https://integrate.api.nvidia.com/v1")
 
 # Load Master Prompt
 try:
-    with open("master_prompt.txt", "r") as f:
+    with open("master_prompt.md", "r") as f:
         SYSTEM_PROMPT = f.read()
 except FileNotFoundError:
-    print("[ERROR] master_prompt.txt not found. Please ensure it is in the same directory.")
+    print("[ERROR] master_prompt.md not found. Please ensure it is in the same directory.")
     sys.exit(1)
 
 def print_bot(msg, end="\n"):

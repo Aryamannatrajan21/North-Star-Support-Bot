@@ -34,7 +34,7 @@ If you simply send this Python code, the evaluator will not have an API key and 
 
 1. Create a brand new, temporary API key in your Nvidia platform (you can delete it immediately after the contract is graded).
 2. Rename `.env.example` to `.env` and hardcode that temporary API key into it. 
-3. Zip the entire folder (`chatbot.py`, `master_prompt.txt`, `.env`, and `README.md`).
+3. Zip the entire folder (`chatbot.py`, `master_prompt.md`, `.env`, and `README.md`).
 4. **In your submission message on Upwork, explicitly write:**
    > *"I have chosen to build a purely code-based LLM chatbot using Python and Nvidia's API to demonstrate raw prompting engineering and API integration skills. To satisfy the requirement that evaluators should not need to provide their own API keys, **I have securely included a temporary Nvidia API key in the `.env` file within the zip.** You can run `python chatbot.py` immediately without any setup or subscriptions. I will revoke the key once grading is complete."*
 
