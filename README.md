@@ -20,5 +20,5 @@ It exactly fulfills the requirements for the Upwork Talent Accelerator AI Chatbo
    python chatbot.py
    ```
 
-
-
+> [!NOTE]
+> **API Latency Notice:** This chatbot utilizes Nvidia's massive `nemotron-3-ultra-550b-a55b` model via their free public API tier. Because this model contains 550 Billion parameters and utilizes deep internal "chain-of-thought" reasoning, you may occasionally experience latency spikes (up to 30-60 seconds) during peak hours before the model begins streaming its response. This is due to server-side congestion on Nvidia's free tier, not a bug in the code!
