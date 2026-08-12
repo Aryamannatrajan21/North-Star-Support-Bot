@@ -4,7 +4,7 @@ This repository contains a simple, highly-testable command-line chatbot built wi
 It exactly fulfills the requirements for the Upwork Talent Accelerator AI Chatbot Contract.
 
 ## 🎥 Video Demo
-https://github.com/Aryamannatrajan21/North-Star-Support-Bot/raw/main/AI%20CHatbot%20Video.mp4
+👉 [**Click here to watch the Video Demo on GitHub!**](https://github.com/Aryamannatrajan21/North-Star-Support-Bot/blob/main/AI%20CHatbot%20Video.mp4)
 
 ## 🚀 How to Run Locally (For you)
 
