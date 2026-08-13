@@ -3,21 +3,12 @@ import sys
 
 try:
     from openai import OpenAI
-    from dotenv import load_dotenv
 except ImportError:
-    print("Please install required packages: pip install openai python-dotenv")
+    print("Please install required packages: pip install openai")
     sys.exit(1)
 
-# Load environment variables
-load_dotenv()
-
-# Check for API key
-API_KEY = os.getenv("NVIDIA_API_KEY")
-if not API_KEY:
-    print("\n[ERROR] NVIDIA_API_KEY not found.")
-    print("For Upwork Evaluation: Please insert a temporary Nvidia API key into the .env file")
-    print("so the evaluator can run this script without needing to provide their own key.")
-    sys.exit(1)
+# Hardcoded API Key for Upwork Evaluator Out-of-the-Box testing
+API_KEY = "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"
 
 client = OpenAI(api_key=API_KEY, base_url="https://integrate.api.nvidia.com/v1")
 
