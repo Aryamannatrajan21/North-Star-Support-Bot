@@ -7,8 +7,8 @@ except ImportError:
     print("Please install required packages: pip install openai")
     sys.exit(1)
 
-# Hardcoded API Key for Upwork Evaluator Out-of-the-Box testing
-API_KEY = "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"
+# API Key (Hardcoded for Upwork Evaluator, but hidden on GitHub)
+API_KEY = "YOUR_NVIDIA_API_KEY_HERE"
 
 client = OpenAI(api_key=API_KEY, base_url="https://integrate.api.nvidia.com/v1")
 
