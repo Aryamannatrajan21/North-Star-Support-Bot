@@ -66,12 +66,11 @@ def main():
             # Call Nvidia API with Nemotron-3-Ultra and reasoning enabled
             print("\n\033[95m[Thinking...]\033[0m", end="", flush=True)
             completion = client.chat.completions.create(
-                model="nvidia/nemotron-3-ultra-550b-a55b",
+                model="meta/llama-3.1-8b-instruct",
                 messages=messages,
                 temperature=0.2, # Keep low for strict rule adherence
                 top_p=0.95,
-                max_tokens=16384,
-                extra_body={"chat_template_kwargs":{"enable_thinking":True},"reasoning_budget":16384},
+                max_tokens=1024,
                 stream=True
             )
             
@@ -85,7 +84,7 @@ def main():
                 
                 chunk_count += 1
                 
-                # Check for reasoning to animate the [Thinking...] indicator
+                # Check for reasoning to animate the [Thinking...] indicator (Legacy from Nemotron, keeping for UX)
                 reasoning = getattr(chunk.choices[0].delta, "reasoning_content", None)
                 if reasoning and chunk_count % 10 == 0:
                     print("\033[95m.\033[0m", end="", flush=True)
